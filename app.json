@@ -1,0 +1,51 @@
+{
+  "name": "SILA SMD",
+  "description": "SILA SMD - Advanced WhatsApp Bot with Auto Session",
+  "repository": "https://github.com/YOUR_USERNAME/SILA-SMD",
+  "logo": "https://i.ibb.co/XftY01RL/sila-smd.png",
+  "keywords": ["whatsapp-bot", "baileys", "sila-smd", "md-bot"],
+  "env": {
+    "DEPLOY_MODE": {
+      "description": "Deployment Mode: 1 = Heroku (auto session), 2 = Local (menu selection)",
+      "value": "1",
+      "required": true
+    },
+    "SESSION_ID": {
+      "description": "Your Session ID (Required for Heroku mode)",
+      "value": "",
+      "required": true
+    },
+    "PREFIX": {
+      "description": "Bot command prefix",
+      "value": ".",
+      "required": false
+    },
+    "BOT_NAME": {
+      "description": "Bot display name",
+      "value": "𝚂𝙸𝙻𝙰 𝚂𝙼𝙳",
+      "required": false
+    },
+    "OWNER_NUMBER": {
+      "description": "Owner phone number (without +)",
+      "value": "",
+      "required": false
+    },
+    "TZ": {
+      "description": "Timezone",
+      "value": "Africa/Dar_es_Salaam",
+      "required": false
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "stack": "heroku-24"
+}

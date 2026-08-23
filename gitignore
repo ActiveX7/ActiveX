@@ -1,0 +1,26 @@
+# Node modules
+node_modules/
+
+# Session files
+session/
+
+# JSON config files (except package.json and package-lock.json)
+*.json
+!package.json
+!package-lock.json
+
+# Specific JSON files to ignore (alternative approach)
+antiviewonce_config.json
+auto_join_log.json
+owner.json
+
+# Data directory
+data/
+
+# Optional: OS files
+.DS_Store
+Thumbs.db
+
+# Optional: IDE files
+.vscode/
+.idea/
